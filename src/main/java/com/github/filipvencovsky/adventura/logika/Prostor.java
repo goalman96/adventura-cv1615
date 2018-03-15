@@ -208,4 +208,18 @@ public class Prostor {
         }
         return nalezenaVec;
     }
+    
+    /**
+     * metoda vrací seznam věcí v místnosti
+     * @return kolekce věcí
+     */
+    public Collection<Vec> getVeci() {
+    	return Collections.unmodifiableCollection(seznamVeci.values());
+    }
+    
+    @Override
+    public String toString() {
+    	// TODO Auto-generated method stub
+    	return getNazev();
+    }
 }
