@@ -55,12 +55,15 @@ public class HomeController extends GridPane implements Observer {
 		this.hra = hra;
 		seznamVeciMistnost.getItems().addAll(hra.getHerniPlan().getAktualniProstor().getVeci());
 		seznamVychodu.getItems().addAll(hra.getHerniPlan().getAktualniProstor().getVychody());
-		System.out.println("");
+		hra.getHerniPlan().addObserver(this);
 	}
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
-		
+		seznamVeciMistnost.getItems().clear();
+		seznamVychodu.getItems().clear();
+		seznamVeciMistnost.getItems().addAll(hra.getHerniPlan().getAktualniProstor().getVeci());
+		seznamVychodu.getItems().addAll(hra.getHerniPlan().getAktualniProstor().getVychody());
 		
 	}
 

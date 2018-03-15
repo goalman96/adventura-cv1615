@@ -35,6 +35,12 @@ public class Vec
 	public boolean jePrenositelna() {
 		return prenositelna;
 	}
+	
+	@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return getJmeno();
+		}
 
 }
 
